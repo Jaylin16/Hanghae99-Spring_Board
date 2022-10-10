@@ -37,11 +37,5 @@ public class BoardDetailDto {
         this.contents = contents;
     }//생성자 추가.
 
-    public BoardDetailDto (Board board) {
-        this.title = title;
-        this.username = username;
-        this.createdAt = createdAt;
-        this.contents = contents;
-    }//생성자 추가.
 
 }

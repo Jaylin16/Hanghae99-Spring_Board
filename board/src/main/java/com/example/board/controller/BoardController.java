@@ -18,7 +18,6 @@ public class BoardController {
     private final BoardRepository boardRepository;
     private final BoardService boardService;
     //BoardRepository에 쌓여있는 데이터와 BoardService를 통해 요청받은 사항을 불변값으로 받아옴.
-    //근데 이미 service에서 repository 값을 받아와서 가공하고 있는데 이곳에서도 한번 더 추가해주는 이유는...?????????
 
     @PostMapping("/api/boards") //create
     public Board createBoard(@RequestBody BoardRequestDto requestDto) {

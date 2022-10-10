@@ -44,6 +44,8 @@ public class BoardService {
         for (Board board : boards) { // Board class의 board 한줄씩을 boards에서 하나씩 빼서 본다.
 //            SimpleDateFormat simpleDateFormat = new SimpleDateFormat ("yyyy-MM-dd a HH:mm:ss");
 
+//            BoardListDto boardListDto = new BoardListDto(board.getTitle(), board.getUsername(), board.getCreatedAt());
+
             BoardListDto boardListDto = new BoardListDto(board.getTitle(), board.getUsername(), board.getCreatedAt());
 
             result.add(boardListDto);
@@ -56,11 +58,11 @@ public class BoardService {
 
       //게시글 상세 내역 조회해주는 메소드.
     public BoardDetailDto boardDetailDtos(Long id) {
-//        Board board = boardRepository.findById(id).orElse(null);
+        Board board = boardRepository.findById(id).orElse(null);
         Optional <Board> aaa = boardRepository.findById(id);
         //board or null 값이 optional이라는 공간에 들어감.
 
-        Board board = aaa.orElse(null);
+//        Board board = aaa.orElse(null);
 
         BoardDetailDto boardDetailDto = new BoardDetailDto(board.getTitle(), board.getUsername(), board.getCreatedAt(), board.getContents());
 
