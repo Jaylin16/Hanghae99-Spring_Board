@@ -11,6 +11,9 @@ import javax.persistence.*;
 @NoArgsConstructor // 기본 생성자를 만들어줍니다.
 @Entity(name = "users") // DB 테이블 역할을 합니다.
 public class User {
+    //nullable: null 허용 여부
+    //unique: 중복 허용 여부 (false일 때 중복 허용)
+
 
     // ID가 자동으로 생성 및 증가합니다.
     @GeneratedValue(strategy = GenerationType.AUTO)

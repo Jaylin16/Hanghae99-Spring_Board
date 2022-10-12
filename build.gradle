@@ -29,6 +29,13 @@ dependencies {
 
     implementation 'org.springframework.boot:spring-boot-starter-security' //스프링 시큐리티 프레임워크 추가
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf' //타임리프 모듈 추가
+
+    //아래는 jwt 관련 추가
+    implementation 'io.jsonwebtoken:jjwt-api:0.11.2'
+    implementation 'commons-codec:commons-codec:1.5'
+    runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.2'
+    runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.11.2'
+    compileOnly 'com.auth0:java-jwt:3.13.0'
 }
 
 tasks.named('test') {
