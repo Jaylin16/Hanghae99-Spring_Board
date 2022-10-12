@@ -7,12 +7,14 @@ import com.example.board.dto.BoardRequestDto;
 import com.example.board.repository.BoardRepository;
 import com.example.board.service.BoardService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RequiredArgsConstructor
-@RestController
+@Controller
 public class BoardController {
 
     private final BoardRepository boardRepository;
@@ -22,17 +24,20 @@ public class BoardController {
     @PostMapping("/api/boards") //create
     public Board createBoard(@RequestBody BoardRequestDto requestDto) {
         Board board = new Board(requestDto);
+        System.out.println(requestDto.getUsername());
         return boardRepository.save(board);
     }
     //post요청을 통해 /boards 경로에서 받아온 데이터를 Dto에 새로 생성 및 저장해줌.
     //그리고 Dto에 저장된 board 값을 Repository로 옮김.
 
     @GetMapping("/api/boards") //read
-    public List<BoardListDto> boardListDtos() {
-        return boardService.boardListDtos();
+    public String create() {
+
+        return "create";
     }
     //get요청을 통해 /boards 경로에 boardRepository에 있는 내용 중 필요 내용을 service에서 가공하여 result로 받아옴.
     //이 때 repository내용을 모두 불러와서 controller가 (html이 있으면 그곳에 보내서) 보여주게 되는건지......?????????
+
 
     @GetMapping("/api/boards/{id}") //read
     public BoardDetailDto boardDetailDtos(@PathVariable Long id) {

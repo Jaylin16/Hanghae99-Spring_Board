@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 
+
 public class UserDetailsImpl implements UserDetails {
 
     private final User user;
@@ -59,4 +60,6 @@ public class UserDetailsImpl implements UserDetails {
 
         return authorities;
     }
+
+
 }
