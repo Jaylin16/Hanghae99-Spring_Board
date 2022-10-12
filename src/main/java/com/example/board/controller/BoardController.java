@@ -22,15 +22,18 @@ public class BoardController {
     //BoardRepository에 쌓여있는 데이터와 BoardService를 통해 요청받은 사항을 불변값으로 받아옴.
 
     @PostMapping("/api/boards") //create
-    public Board createBoard(@RequestBody BoardRequestDto requestDto) {
+    public String createBoard(BoardRequestDto requestDto) {
+        System.out.println("1111");
         Board board = new Board(requestDto);
-        System.out.println(requestDto.getUsername());
-        return boardRepository.save(board);
+        boardRepository.save(board);
+
+        System.out.println("22222");
+        return "redirect:/";
     }
     //post요청을 통해 /boards 경로에서 받아온 데이터를 Dto에 새로 생성 및 저장해줌.
     //그리고 Dto에 저장된 board 값을 Repository로 옮김.
 
-    @GetMapping("/api/boards") //read
+    @GetMapping("/api/boards") //read (게시글 작성쪽 양식 가져오는 get요청)
     public String create() {
 
         return "create";

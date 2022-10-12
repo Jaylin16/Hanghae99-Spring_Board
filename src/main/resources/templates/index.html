@@ -32,13 +32,15 @@
     모아보기
   </div>
 
-  <table>
-    <tr th:each="list : ${boardList}">
-      <td th:text="${list.title}"></td>
-      <td th:text="${list.username}"></td>
-      <td th:text="${#dates.format(list.createAt, 'yyyy-MM-dd HH:mm')}"></td>
-    </tr>
-  </table>
+  <div class="container">
+    <table class="table table-hover">
+      <tr th:each="list : ${boardList}">
+        <td th:text="${list.title}"></td>
+        <td th:text="${list.username}"></td>
+        <td th:text="${list.createAt}"></td>
+      </tr>
+    </table>
+  </div>
 
 
   <div class="nav-create" >

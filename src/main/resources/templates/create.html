@@ -71,19 +71,20 @@
     <script>
 
 
-
     </script>
 </head>
 
 <body>
 
-<form action="/api/boards" method="post">
+
 
     <div class="title">
         <a>
             <h1 class="title">게시글 작성</h1><br>
         </a>
     </div>
+
+    <form action="/api/boards" method="post">
 
     <div class="inputBoxs">
 
@@ -96,15 +97,17 @@
 
         <div class="input-group mb-2">
             <span class="input-group-text">작성자</span>
-<!--            <type class=border id="name"><span th:text="${username}"></span></type>-->
-            <input name="username" id="username" type="text" class="form-control" placeholder="닉네임을 입력하세요." aria-label="Username"
+            <!--            <type class=border id="name"><span th:text="${username}"></span></type>-->
+            <input name="username" id="username" type="text" class="form-control" placeholder="닉네임을 입력하세요."
+                   aria-label="Username"
                    aria-describedby="basic-addon1">
         </div>
 
         <div class="input-group mb-2">
             <span class="input-group-text">비밀번호</span>
             <!--            <type class=border id="name"><span th:text="${username}"></span></type>-->
-            <input name="password" id="password" type="text" class="form-control" placeholder="비밀번호를 입력하세요." aria-label="password"
+            <input name="password" id="password" type="text" class="form-control" placeholder="비밀번호를 입력하세요."
+                   aria-label="password"
                    aria-describedby="basic-addon1">
         </div>
 
