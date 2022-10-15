@@ -835,3 +835,14 @@ input[type=submit] {
     border: 1px solid transparent;
     border-radius: .25rem;
 }
+
+.table {
+    width: 400px;
+    margin : 0 auto;
+    font-size: 21px;
+    letter-spacing: 0.05em;
+}
+
+.table tr td {
+    text-align: center;
+}

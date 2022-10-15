@@ -1,5 +1,6 @@
 package com.example.board.dto;
 
+import com.sun.istack.NotNull;
 import lombok.Getter;
 
 import java.time.LocalDateTime;
@@ -9,6 +10,7 @@ import java.time.LocalDateTime;
 public class BoardListDto {
     private String title;
     private String username;
+
     private LocalDateTime createdAt;
 
     public BoardListDto (String title, String username, LocalDateTime createdAt) {

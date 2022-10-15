@@ -26,7 +26,6 @@ public class BoardController {
         System.out.println("1111");
         Board board = new Board(requestDto);
         boardRepository.save(board);
-
         System.out.println("22222");
         return "redirect:/";
     }
