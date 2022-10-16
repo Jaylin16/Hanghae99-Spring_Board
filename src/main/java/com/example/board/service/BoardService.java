@@ -60,7 +60,7 @@ public class BoardService {
       //게시글 상세 내역 조회해주는 메소드.
     public BoardDetailDto boardDetailDtos(Long id) {
         Board board = boardRepository.findById(id).orElse(null);
-        Optional <Board> aaa = boardRepository.findById(id);
+//        Optional <Board> aaa = boardRepository.findById(id);
         //board or null 값이 optional이라는 공간에 들어감.
 
 //        Board board = aaa.orElse(null);
